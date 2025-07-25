@@ -7,11 +7,11 @@ class Book {
 
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
-      id: json['id'] is int
-          ? json['id']
-          : int.tryParse(json['id'].toString()) ?? 0,
+      id: json['ID'] is int
+          ? json['ID']
+          : int.tryParse(json['ID'].toString()) ?? 0,
       name: json['name']?.toString() ?? '',
-      balance: _parseDouble(json['balance']),
+      balance: _parseDouble(json['Balance']),
     );
   }
 
